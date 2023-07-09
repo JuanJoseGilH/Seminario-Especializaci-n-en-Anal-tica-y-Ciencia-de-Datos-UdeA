@@ -174,3 +174,167 @@ En la primera celda de esta sección, se utiliza el método train_test_split() p
 Posteriormente, en la segunda celda de esta sección, se realiza una búsqueda de rejilla para cuantificar cuáles son los valores de los mejores hiperparámetros del modelo. Los hiper parámetros que se utilizaron dentro de la búsqueda fueron: kernel, C y gamma. Es importante hacer uso del hiper parámetro n_jobs = -1 para que se empleen todos los núcleos del procesador con el que cuente la máquina en la cual se esté ejecutando el algoritmo.
 
 Luego de haber ejecutado el algoritmo GridSearchCV(), se obtiene que los mejores hiper parámetros son: {'C':1, 'gamma':'auto', 'kernel':'rbf'} El tiempo de ejecución del algoritmo de búsqueda de rejilla es de aproximadamente 36 minutos con 32 segundos.
+
+## APLICACIÓN DEL MODELO XGBOOST
+
+### TAMAÑO DE MUESTRA DE 2.000 DATOS
+
+#### SIN ELIMINACIÓN DE DATOS ATÍPICOS
+
+En la primera celda de esta sección, se utiliza el método train_test_split() para tomar exactamente dos mil datos del dataset de entrenamiento. Es importante que se ejecute primero que las celdas posteriores para así poder sobre escribir las variables X_train, X_test, Y_train e Y_test.
+
+Posteriormente, en la segunda celda de esta sección, se realiza una búsqueda de rejilla para cuantificar cuáles son los valores de los mejores hiperparámetros del modelo. Los hiper parámetros que se utilizaron dentro de la búsqueda fueron: learning_rate, n_estimators y max_depth. Es importante hacer uso del hiper parámetro n_jobs = -1 para que se empleen todos los núcleos del procesador con el que cuente la máquina en la cual se esté ejecutando el algoritmo.
+
+Luego de haber ejecutado el algoritmo GridSearchCV(), se obtiene que los mejores hiper parámetros son: {'learning_rate':0.03, 'n_estimators':500, 'max_depth':3} El tiempo de ejecución del algoritmo de búsqueda de rejilla es de aproximadamente 11.6 segundos.
+
+### TAMAÑO DE MUESTRA DE 8.000 DATOS
+
+#### SIN ELIMINACIÓN DE DATOS ATÍPICOS
+
+En la primera celda de esta sección, se utiliza el método train_test_split() para tomar exactamente ocho mil datos del dataset de entrenamiento. Es importante que se ejecute primero que las celdas posteriores para así poder sobre escribir las variables X_train, X_test, Y_train e Y_test
+
+Posteriormente, en la segunda celda de esta sección, se realiza una búsqueda de rejilla para cuantificar cuáles son los valores de los mejores hiperparámetros del modelo. Los hiper parámetros que se utilizaron dentro de la búsqueda fueron: learning_rate, n_estimators y max_depth. Es importante hacer uso del hiper parámetro n_jobs = -1 para que se empleen todos los núcleos del procesador con el que cuente la máquina en la cual se esté ejecutando el algoritmo.
+
+Luego de haber ejecutado el algoritmo GridSearchCV(), se obtiene que los mejores hiper parámetros son: {'learning_rate':0.1, 'n_estimators':100, 'max_depth':3} El tiempo de ejecución del algoritmo de búsqueda de rejilla es de aproximadamente 32.1 segundos.
+
+
+### TAMAÑO DE MUESTRA DE 40.000 DATOS
+
+#### SIN ELIMINACIÓN DE DATOS ATÍPICOS
+
+En la primera celda de esta sección, se utiliza el método train_test_split() para tomar exactamente cuarenta mil datos del dataset de entrenamiento. Es importante que se ejecute primero que las celdas posteriores para así poder sobre escribir las variables X_train, X_test, Y_train e Y_test
+
+Posteriormente, en la segunda celda de esta sección, se realiza una búsqueda de rejilla para cuantificar cuáles son los valores de los mejores hiperparámetros del modelo. Los hiper parámetros que se utilizaron dentro de la búsqueda fueron: learning_rate, n_estimators y max_depth. Es importante hacer uso del hiper parámetro n_jobs = -1 para que se empleen todos los núcleos del procesador con el que cuente la máquina en la cual se esté ejecutando el algoritmo.
+
+Luego de haber ejecutado el algoritmo GridSearchCV(), se obtiene que los mejores hiper parámetros son: {'learning_rate':0.06, 'n_estimators':500, 'max_depth':3} El tiempo de ejecución del algoritmo de búsqueda de rejilla es de aproximadamente 2.31 minutos.
+
+### TAMAÑO DE MUESTRA DE 2.000 DATOS
+
+#### CON ELIMINACIÓN DE DATOS ATÍPICOS
+
+En la primera celda de esta sección, se utiliza el método train_test_split() para tomar exactamente dos mil datos del dataset de entrenamiento. Es importante que se ejecute primero que las celdas posteriores para así poder sobre escribir las variables X_train_LOF, X_test_LOF, Y_train_LOF e Y_test_LOF.
+
+Posteriormente, en la segunda celda de esta sección, se realiza una búsqueda de rejilla para cuantificar cuáles son los valores de los mejores hiperparámetros del modelo. Los hiper parámetros que se utilizaron dentro de la búsqueda fueron: learning_rate, n_estimators y max_depth. Es importante hacer uso del hiper parámetro n_jobs = -1 para que se empleen todos los núcleos del procesador con el que cuente la máquina en la cual se esté ejecutando el algoritmo.
+
+Luego de haber ejecutado el algoritmo GridSearchCV(), se obtiene que los mejores hiper parámetros son: {'learning_rate':0.03, 'n_estimators':500, 'max_depth':1} El tiempo de ejecución del algoritmo de búsqueda de rejilla es de aproximadamente 9.64 segundos.
+
+
+### TAMAÑO DE MUESTRA DE 8.000 DATOS
+
+#### CON ELIMINACIÓN DE DATOS ATÍPICOS
+
+En la primera celda de esta sección, se utiliza el método train_test_split() para tomar exactamente ocho mil datos del dataset de entrenamiento. Es importante que se ejecute primero que las celdas posteriores para así poder sobre escribir las variables X_train_LOF, X_test_LOF, Y_train_LOF e Y_test_LOF
+
+Posteriormente, en la segunda celda de esta sección, se realiza una búsqueda de rejilla para cuantificar cuáles son los valores de los mejores hiperparámetros del modelo. Los hiper parámetros que se utilizaron dentro de la búsqueda fueron: learning_rate, n_estimators y max_depth. Es importante hacer uso del hiper parámetro n_jobs = -1 para que se empleen todos los núcleos del procesador con el que cuente la máquina en la cual se esté ejecutando el algoritmo.
+
+Luego de haber ejecutado el algoritmo GridSearchCV(), se obtiene que los mejores hiper parámetros son: {'learning_rate':0.03, 'n_estimators':500, 'max_depth':3} El tiempo de ejecución del algoritmo de búsqueda de rejilla es de aproximadamente 31.8 segundos.
+
+### TAMAÑO DE MUESTRA DE 40.000 DATOS
+
+#### CON ELIMINACIÓN DE DATOS ATÍPICOS
+
+En la primera celda de esta sección, se utiliza el método train_test_split() para tomar exactamente cuarenta mil datos del dataset de entrenamiento. Es importante que se ejecute primero que las celdas posteriores para así poder sobre escribir las variables X_train_LOF, X_test_LOF, Y_train_LOF e Y_test_LOF
+
+Posteriormente, en la segunda celda de esta sección, se realiza una búsqueda de rejilla para cuantificar cuáles son los valores de los mejores hiperparámetros del modelo. Los hiper parámetros que se utilizaron dentro de la búsqueda fueron: learning_rate, n_estimators y max_depth. Es importante hacer uso del hiper parámetro n_jobs = -1 para que se empleen todos los núcleos del procesador con el que cuente la máquina en la cual se esté ejecutando el algoritmo.
+
+Luego de haber ejecutado el algoritmo GridSearchCV(), se obtiene que los mejores hiper parámetros son: {'learning_rate':0.06, 'n_estimators':500, 'max_depth':3} El tiempo de ejecución del algoritmo de búsqueda de rejilla es de aproximadamente 2.31 minutos.
+
+## APLICACIÓN DEL MODELO ADABOOST
+
+### TAMAÑO DE MUESTRA DE 2.000 DATOS
+
+#### SIN ELIMINACIÓN DE DATOS ATÍPICOS
+
+En la primera celda de esta sección, se utiliza el método train_test_split() para tomar exactamente dos mil datos del dataset de entrenamiento. Es importante que se ejecute primero que las celdas posteriores para así poder sobre escribir las variables X_train, X_test, Y_train e Y_test.
+
+Posteriormente, en la segunda celda de esta sección, se realiza una búsqueda de rejilla para cuantificar cuáles son los valores de los mejores hiperparámetros del modelo. Los hiper parámetros que se utilizaron dentro de la búsqueda fueron: learning_rate, n_estimators y algorithm. Es importante hacer uso del hiper parámetro n_jobs = -1 para que se empleen todos los núcleos del procesador con el que cuente la máquina en la cual se esté ejecutando el algoritmo.
+
+Luego de haber ejecutado el algoritmo GridSearchCV(), se obtiene que los mejores hiper parámetros son: {'learning_rate':0.06, 'n_estimators':100, 'algorithm':SAMME} El tiempo de ejecución del algoritmo de búsqueda de rejilla es de aproximadamente 18 segundos.
+
+
+### TAMAÑO DE MUESTRA DE 8.000 DATOS
+
+#### SIN ELIMINACIÓN DE DATOS ATÍPICOS
+
+En la primera celda de esta sección, se utiliza el método train_test_split() para tomar exactamente ocho mil datos del dataset de entrenamiento. Es importante que se ejecute primero que las celdas posteriores para así poder sobre escribir las variables X_train, X_test, Y_train e Y_test
+
+Posteriormente, en la segunda celda de esta sección, se realiza una búsqueda de rejilla para cuantificar cuáles son los valores de los mejores hiperparámetros del modelo. Los hiper parámetros que se utilizaron dentro de la búsqueda fueron: learning_rate, n_estimators y algorithm. Es importante hacer uso del hiper parámetro n_jobs = -1 para que se empleen todos los núcleos del procesador con el que cuente la máquina en la cual se esté ejecutando el algoritmo.
+
+Luego de haber ejecutado el algoritmo GridSearchCV(), se obtiene que los mejores hiper parámetros son: {'learning_rate':0.06, 'n_estimators':100, 'algorithm':SAMME} El tiempo de ejecución del algoritmo de búsqueda de rejilla es de aproximadamente 42.2 segundos.
+
+
+### TAMAÑO DE MUESTRA DE 40.000 DATOS
+
+#### SIN ELIMINACIÓN DE DATOS ATÍPICOS
+
+En la primera celda de esta sección, se utiliza el método train_test_split() para tomar exactamente cuarenta mil datos del dataset de entrenamiento. Es importante que se ejecute primero que las celdas posteriores para así poder sobre escribir las variables X_train, X_test, Y_train e Y_test
+
+Posteriormente, en la segunda celda de esta sección, se realiza una búsqueda de rejilla para cuantificar cuáles son los valores de los mejores hiperparámetros del modelo. Los hiper parámetros que se utilizaron dentro de la búsqueda fueron: learning_rate, n_estimators y algorithm. Es importante hacer uso del hiper parámetro n_jobs = -1 para que se empleen todos los núcleos del procesador con el que cuente la máquina en la cual se esté ejecutando el algoritmo.
+
+Luego de haber ejecutado el algoritmo GridSearchCV(), se obtiene que los mejores hiper parámetros son: {'learning_rate':0.3, 'n_estimators':500, 'algorithm':SAMME.R} El tiempo de ejecución del algoritmo de búsqueda de rejilla es de aproximadamente 3.34 minutos.
+
+
+### TAMAÑO DE MUESTRA DE 2.000 DATOS
+
+#### CON ELIMINACIÓN DE DATOS ATÍPICOS
+
+En la primera celda de esta sección, se utiliza el método train_test_split() para tomar exactamente dos mil datos del dataset de entrenamiento. Es importante que se ejecute primero que las celdas posteriores para así poder sobre escribir las variables X_train_LOF, X_test_LOF, Y_train_LOF e Y_test_LOF.
+
+Posteriormente, en la segunda celda de esta sección, se realiza una búsqueda de rejilla para cuantificar cuáles son los valores de los mejores hiperparámetros del modelo. Los hiper parámetros que se utilizaron dentro de la búsqueda fueron: learning_rate, n_estimators y algorithm. Es importante hacer uso del hiper parámetro n_jobs = -1 para que se empleen todos los núcleos del procesador con el que cuente la máquina en la cual se esté ejecutando el algoritmo.
+
+Luego de haber ejecutado el algoritmo GridSearchCV(), se obtiene que los mejores hiper parámetros son: {'learning_rate':0.06, 'n_estimators':1000, 'algorithm':SAMME} El tiempo de ejecución del algoritmo de búsqueda de rejilla es de aproximadamente 19.6 segundos.
+
+### TAMAÑO DE MUESTRA DE 8.000 DATOS
+
+#### CON ELIMINACIÓN DE DATOS ATÍPICOS
+
+En la primera celda de esta sección, se utiliza el método train_test_split() para tomar exactamente ocho mil datos del dataset de entrenamiento. Es importante que se ejecute primero que las celdas posteriores para así poder sobre escribir las variables X_train_LOF, X_test_LOF, Y_train_LOF e Y_test_LOF
+
+Posteriormente, en la segunda celda de esta sección, se realiza una búsqueda de rejilla para cuantificar cuáles son los valores de los mejores hiperparámetros del modelo. Los hiper parámetros que se utilizaron dentro de la búsqueda fueron: learning_rate, n_estimators y algorithm. Es importante hacer uso del hiper parámetro n_jobs = -1 para que se empleen todos los núcleos del procesador con el que cuente la máquina en la cual se esté ejecutando el algoritmo.
+
+Luego de haber ejecutado el algoritmo GridSearchCV(), se obtiene que los mejores hiper parámetros son: {'learning_rate':0.3, 'n_estimators':1000, 'algorithm':SAMME} El tiempo de ejecución del algoritmo de búsqueda de rejilla es de aproximadamente 46.2 segundos.
+
+### TAMAÑO DE MUESTRA DE 40.000 DATOS
+
+#### CON ELIMINACIÓN DE DATOS ATÍPICOS
+
+En la primera celda de esta sección, se utiliza el método train_test_split() para tomar exactamente cuarenta mil datos del dataset de entrenamiento. Es importante que se ejecute primero que las celdas posteriores para así poder sobre escribir las variables X_train_LOF, X_test_LOF, Y_train_LOF e Y_test_LOF
+
+Posteriormente, en la segunda celda de esta sección, se realiza una búsqueda de rejilla para cuantificar cuáles son los valores de los mejores hiperparámetros del modelo. Los hiper parámetros que se utilizaron dentro de la búsqueda fueron: learning_rate, n_estimators y algorithm. Es importante hacer uso del hiper parámetro n_jobs = -1 para que se empleen todos los núcleos del procesador con el que cuente la máquina en la cual se esté ejecutando el algoritmo.
+
+Luego de haber ejecutado el algoritmo GridSearchCV(), se obtiene que los mejores hiper parámetros son: {'learning_rate':0.1, 'n_estimators':500, 'algorithm':SAMME.R} El tiempo de ejecución del algoritmo de búsqueda de rejilla es de aproximadamente 3.30 minutos.
+
+# IMPLEMENTACIÓN DE CROSS-VALIDATION
+
+Una vez se encontraron los mejores hiper parámetros para cada uno de los modelos tanto para el escenario con y sin eliminación de datos atípicos, se implementó un método de validación cruzada, el cual se describe a continuación: Una vez se encontraron los mejores hiper parámetros para cada uno de los modelos tanto para el escenario con y sin eliminación de datos atípicos, se implementó un método de validación cruzada, el cual se describe a continuación: 
+
+## ESCENARIO SIN ELIMINACIÓN DE DATOS ATÍPICOS
+
+En la primera celda de esta sección, se ejecuta nuevamente una partición aleatoria del dataset para tomar 80% de este para ejecutar un ajuste con los modelos cuyos mejores hiperparámetros fueron los que provienen de las múltiples búsquedas de rejilla implementadas. El método fit() permitió llevar acabo este ajuste con todos los modelos evaluados en un tiempo estimado de 21 minutos con 20 segundos.
+
+Posteriormente, del 20% del dataset que no se utilizó para hacer ajuste en los modelos, se extrajo un 10% adicional para llevar a cabo el cross validation. Esta partición se realizó con otro train_test_split() en el cual se pasaron como argumentos X_test, Y_test y train_size = 0.5.
+
+Finalmente, se realiza el cross validation con ayuda del método cross_validate() dentro de un ciclo for, haciendo uso a su vez del parámetro n_jobs = -1, el cual permite paralelizar el algoritmo dentro de todos los núcleos del procesador de la máquina.
+
+Luego de un tiempo aproximado de 56 minutos con 46 segundos, se logró el mayor test_f1 con el modelo modelSVC. 
+
+En la sexta celda de esta sección se graficó la curva ROC, la cual arrojó resultados de área bajo la curva muy similares entre los modelos. Este resultado se evidencia a su vez en el gráfico de caja y bigotes que se grafica posteriormente con ayuda de la librería seaborn.
+
+Por último, el 10% restante del dataset que no se implementó ni en el método fit() ni en la etapa de validación cruzada, se utilizó para llevar a cabo predicciones con el modelo SVC a través del método predict(). Estos resultados de predicción fueron graficados en una matriz de confusión que arrojó un F1 score para la clase 0 igual a 0.72 y para la clase 1 igual a 0.76.
+
+## ESCENARIO CON ELIMINACIÓN DE DATOS ATÍPICOS
+
+En la primera celda de esta sección, se ejecuta nuevamente una partición aleatoria del dataset para tomar 80% de este para ejecutar un ajuste con los modelos cuyos mejores hiperparámetros fueron los que provienen de las múltiples búsquedas de rejilla implementadas. El método fit() permitió llevar acabo este ajuste con todos los modelos evaluados en un tiempo estimado de 16 minutos con 31 segundos.
+
+Posteriormente, del 20% del dataset que no se utilizó para hacer ajuste en los modelos, se extrajo un 10% adicional para llevar a cabo el cross validation. Esta partición se realizó con otro train_test_split() en el cual se pasaron como argumentos X_test, Y_test y train_size = 0.5.
+
+Finalmente, se realiza el cross validation con ayuda del método cross_validate() dentro de un ciclo for, haciendo uso a su vez del parámetro n_jobs = -1, el cual permite paralelizar el algoritmo dentro de todos los núcleos del procesador de la máquina.
+
+Luego de un tiempo aproximado de 46 minutos con 28 segundos, se logró el mayor test_f1 con el modelo modelXGBC_LOF. 
+
+En la sexta celda de esta sección se graficó la curva ROC, la cual arrojó resultados de área bajo la curva muy similares entre los modelos. Este resultado se evidencia a su vez en el gráfico de caja y bigotes que se grafica posteriormente con ayuda de la librería seaborn.
+
+Por último, el 10% restante del dataset que no se implementó ni en el método fit() ni en la etapa de validación cruzada, se utilizó para llevar a cabo predicciones con el modelo XGBC_LOF a través del método predict(). Estos resultados de predicción fueron graficados en una matriz de confusión que arrojó un F1 score para la clase 0 igual a 0.74 y para la clase 1 igual a 0.77.
+
+
+
